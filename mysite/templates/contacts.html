@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+</head>
+<body>
+    <h1>Контакты</h1>
+    <h3>переходов: {{count}}</h3>
+    {% if is_saved %}
+    <h3>Ваше сообщение сохранено.</h3>
+    {% endif %}
+    <br>
+    <form method="POST">
+        <label for="topic">Тема:</label><br>
+        <input type="text" id="topic" name="topic"><br>
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" placeholder="Наберите своё сообщение..."></textarea><br>
+        <label for="email">Электронная почта:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

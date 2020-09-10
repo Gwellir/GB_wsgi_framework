@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Requests</title>
+</head>
+<body>
+    <h1>Тест запросов</h1>
+    <h3>переходов: {{count}}</h3>
+    <h3>GET value: {{get_field}}</h3>
+    <h3>POST value: {{post_field}}</h3>
+    <form>
+        <label for="test_get">Test GET field</label>
+        <input type="text" id="test_get" name="test_get"><br>
+        <input type="submit" value="Submit GET">
+    </form>
+    <br>
+    <form method="POST">
+        <label for="test_post">Test POST field</label>
+        <input type="text" id="test_post" name="test_post"><br>
+        <input type="submit" value="Submit POST">
+    </form>
+</body>
+</html>

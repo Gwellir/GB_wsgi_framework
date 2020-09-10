@@ -1,10 +1,12 @@
-import views
+from mysite import views
 from engine.core import Application
 
 
 paths = {
-    '': views.index,
-    '/about': views.about,
+    '/': views.index,
+    '/about/': views.about,
+    '/requests/': views.requests,
+    '/contacts/': views.contacts,
 }
 
 
