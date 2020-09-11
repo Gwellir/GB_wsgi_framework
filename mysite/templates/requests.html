@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+{% endblock %}
+{% block css %}
+    {{ super() }}
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <h3>GET value: {{get_field}}</h3>
+    <h3>POST value: {{post_field}}</h3>
+    <form>
+        <label for="test_get">Test GET field</label>
+        <input type="text" id="test_get" name="test_get"><br>
+        <input type="submit" value="Submit GET">
+    </form>
+    <br>
+    <form method="POST">
+        <label for="test_post">Test POST field</label>
+        <input type="text" id="test_post" name="test_post"><br>
+        <input type="submit" value="Submit POST">
+    </form>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+{% endblock %}
+{% block css %}
+    {{ super() }}
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    {% if is_saved %}
+    <h3>Ваше сообщение сохранено.</h3>
+    {% endif %}
+    <br>
+    <form method="POST">
+        <label for="topic">Тема:</label><br>
+        <input type="text" id="topic" name="topic"><br>
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" placeholder="Наберите своё сообщение..." style="width:350px; height:150px"></textarea><br>
+        <label for="email">Электронная почта:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Отправить">
+    </form>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}
