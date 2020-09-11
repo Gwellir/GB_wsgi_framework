@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Requests</title>
-</head>
-<body>
-    <h1>Тест запросов</h1>
-    <h3>переходов: {{count}}</h3>
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+{% endblock %}
+{% block css %}
+    {{ super() }}
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
     <h3>GET value: {{get_field}}</h3>
     <h3>POST value: {{post_field}}</h3>
     <form>
@@ -20,5 +25,8 @@
         <input type="text" id="test_post" name="test_post"><br>
         <input type="submit" value="Submit POST">
     </form>
-</body>
-</html>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-    <h1>Главная страница</h1>
-    <h3>переходов: {{count}}</h3>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }}
+{% endblock %}
+{% block css %}
+    {{ super() }}
+{% endblock %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

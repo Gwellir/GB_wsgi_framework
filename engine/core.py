@@ -21,14 +21,17 @@ class Application:
             view = self.not_found
 
         request = {}
+        method = environ['REQUEST_METHOD']
         # parsing GET request parameters
         query_string = environ['QUERY_STRING']
         # print(query_string)
-        request.update(self.parse_input_data(query_string))
-
+        params = self.parse_input_data(query_string)
         # parsing POST request parameters
-        post_data = self.parse_wsgi_input_data(self.get_wsgi_input_data(environ))
-        request.update(post_data)
+        data = self.parse_wsgi_input_data(self.get_wsgi_input_data(environ))
+
+        request['method'] = method
+        request['data'] = data
+        request['params'] = params
 
         # running middleware
         for fc in self.fronts:
